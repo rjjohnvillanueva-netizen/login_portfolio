@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Particles -->
+    <div class="bg-particles">
+        <div class="particle" style="width: 10px; height: 10px; top: 10%; left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="width: 8px; height: 8px; top: 20%; left: 80%; animation-delay: 1s;"></div>
+        <div class="particle" style="width: 12px; height: 12px; top: 60%; left: 15%; animation-delay: 2s;"></div>
+        <div class="particle" style="width: 6px; height: 6px; top: 80%; left: 70%; animation-delay: 1.5s;"></div>
+        <div class="particle" style="width: 10px; height: 10px; top: 40%; left: 90%; animation-delay: 0.5s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <button id="logoutBtn" class="logout-btn">LOGOUT</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h3>Hello, It's Me</h3>
+                <h1>RJ JOHN VILLANUEVA</h1>
+                <h2>And I'm a <span>FUTURE DEVELOPER</span></h2>
+                <p>I'm new to this but im trying my best to do my best, you need to hire me because I have a lot of potentialities. I am a very hardworking and very realiable to things and i am willing to learn new knowledge and skills.</p>
+                
+                <div class="social-links">
+                    <a href="https://www.facebook.com/rjpatrick.villanueva.5" title="Facebook">f</a>
+                    <a href="https://www.tiktok.com/@janjannixxx" title="Tik-Tok">📱</a>
+                    <a href="https://www.instagram.com/janjannix/" title="Instagram">📷</a>
+                    <a href="mailto:rjjohnvillanueva@gmail.com" title="G-Mail">ɢ</a>
+                </div>
+
+                <a href="#" class="download-btn">YOU NEED TO HIRE ME!!</a>
+            </div>
+
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="gwapoko.jpg" alt="Profile Picture" id="profileImage">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section fade-up">
+        <div class="about-container">
+            <div class="about-card">
+                <h1>About Me</h1>
+                <p>
+                    I am RJ John Villanueva, a future developer who is passionate about learning
+                    web development and improving my programming skills. I am hardworking,
+                    dedicated, and always eager to learn new technologies.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h1 class="skills-title">My Skills</h1>
+
+        <div class="skill-cards">
+
+            <div class="skill-card fade-up">
+                <h3>HTML</h3>
+                <div class="skill-bar">
+                    <span style="width: 90%"></span>
+                </div>
+            </div>
+
+            <div class="skill-card fade-up">
+                <h3>CSS</h3>
+                <div class="skill-bar">
+                    <span style="width: 85%"></span>
+                </div>
+            </div>
+
+            <div class="skill-card fade-up">
+                <h3>JavaScript</h3>
+                <div class="skill-bar">
+                    <span style="width: 65%"></span>
+                </div>
+            </div>
+
+            <div class="skill-card fade-up">
+                <h3>Python</h3>
+                <div class="skill-bar">
+                    <span style="width: 55%"></span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h1>My Portfolio</h1>
+        <p>Here are some of my projects.</p>
+
+        <div class="portfolio-grid">
+
+            <div class="project-card fade-up">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project Title 1</h3>
+                <p>A simple description of the project I built.</p>
+                <a href="Hello.png" class="view-btn">View Project</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact Me</h1>
+
+        <div class="contact-container fade-up">
+
+            <div class="contact-info">
+                <p><strong>Email:</strong> rjjohnvillanueva@gmail.com</p>
+                <p><strong>Facebook:</strong> <a href="https://www.facebook.com/rjpatrick.villanueva.5" target="_blank">My Profile</a></p>
+                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/janjannix/" target="_blank">My Profile</a></p>
+                <p><strong>TikTok:</strong> <a href="https://www.tiktok.com/@janjannixxx" target="_blank">My Profile</a></p>
+            </div>
+
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
