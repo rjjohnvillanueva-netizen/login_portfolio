@@ -1,4 +1,4 @@
-// Smooth scrolling
+// ================= Smooth Scrolling =================
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault();
@@ -9,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
-// Active navigation highlight
+// ================= Active Navigation Highlight =================
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-links a");
@@ -29,9 +29,8 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Fade In Scroll Animation
+// ================= Fade In Scroll Animation =================
 const sectionsFade = document.querySelectorAll("section");
-
 window.addEventListener("scroll", () => {
     sectionsFade.forEach(sec => {
         const top = sec.getBoundingClientRect().top;
@@ -41,13 +40,11 @@ window.addEventListener("scroll", () => {
     });
 });
 
-// Skill bar progress animation
+// ================= Skill Bar Progress Animation =================
 const skillBars = document.querySelectorAll(".skill-bar span");
-
 window.addEventListener("scroll", () => {
     skillBars.forEach(bar => {
         const top = bar.getBoundingClientRect().top;
-
         if (top < window.innerHeight - 80) {
             const width = bar.getAttribute("style").match(/width:\s*([0-9]+%)/)[1];
             bar.style.setProperty("--target-width", width);
@@ -55,14 +52,13 @@ window.addEventListener("scroll", () => {
     });
 });
 
-// Non-destructive skill bar animation enhancement
+// ================= Non-destructive Skill Bar Animation =================
 document.addEventListener("scroll", () => {
     document.querySelectorAll(".skill-card").forEach(card => {
         const bar = card.querySelector(".skill-bar span");
         const rect = card.getBoundingClientRect();
-
         if (rect.top < window.innerHeight - 120) {
-            const width = bar.style.width; 
+            const width = bar.style.width;
             bar.style.width = "0%";
             setTimeout(() => {
                 bar.style.width = width;
@@ -71,7 +67,7 @@ document.addEventListener("scroll", () => {
     });
 });
 
-// Fade-in for new portfolio & contact elements
+// ================= Fade-in Portfolio & Contact Elements =================
 document.addEventListener("scroll", () => {
     document.querySelectorAll(".fade-up").forEach(el => {
         if (el.getBoundingClientRect().top < window.innerHeight - 120) {
@@ -80,15 +76,26 @@ document.addEventListener("scroll", () => {
     });
 });
 
-// Logout functionality
-const logoutBtn = document.getElementById("logoutBtn");
+// ================= Logout Functionality =================
+document.addEventListener("click", (e) => {
+    if (e.target && e.target.id === "logoutBtn") {
+        // Clear login data from localStorage
+        localStorage.removeItem("loggedIn");
+        localStorage.removeItem("currentUser");
 
-if (logoutBtn) {
-    logoutBtn.addEventListener("click", () => {
-        // Go up one folder, then into NewLogin folder
-        window.location.href = "../NewLogin/index.html";
-    });
-}
+        // Redirect to your login repo's GitHub Pages URL
+        window.location.href = "https://rjjohnvillanueva-netizen.github.io/login/"; 
+    }
+});
 
-// Profile image hover effect
+// ================= Auto Redirect if Not Logged In =================
+document.addEventListener("DOMContentLoaded", () => {
+    if (!localStorage.getItem("loggedIn")) {
+        // Redirect immediately to login repo if user is not logged in
+        window.location.href = "https://rjjohnvillanueva-netizen.github.io/login/"; 
+    }
+});
+
+// ================= Profile Image Hover Effect =================
 const profileImage = document.getElementById("profileImage");
+// (You can add hover effects or dropdown menu for logout here if needed)
